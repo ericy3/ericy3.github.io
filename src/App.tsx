@@ -1,16 +1,20 @@
 import React from 'react';
 import './App.css';
-import NameSection from './shared/NameSection';
+import About from './pages/About';
+import Navbar from './shared/Navbar';
 
 function App() {
   return (
-    <div className="App">
+    <>
+    <Navbar />
+    <div className="App bg-orange-50 h-screen"> 
         <div className="flex flex-row flex-start">
-          <div>
-            <NameSection />
+          <div className="pt-12">
+            <About />
             </div>
           </div>
      </div>
+     </>
   );
 }
 
