@@ -17,13 +17,13 @@ const About = () => {
     return (
         <div className="flex flex-row font-quicksand text-lg self-center">
             <div className="w-1/6" />
-            <div className="flex flex-col w-1/3 inline-block mt-20 text-right mr-12">
+            <div className="flex flex-col w-1/3 inline-block mt-16 text-right mr-2">
                 <div className="text-7xl mb-5">
                     hey, i'm <a className="text-green-800">eric yang.</a>  
                 </div>
                 <Introduction/>
             </div>
-            <div className="w-1/3 ml-14 place-self-center">
+            <div className="flex w-1/3 ml-28 justify-items-center">
                 <img id="portrait" className="w-3/4 rounded-full border-2 border-green-700" alt="portrait" src="../pictures/square_portrait.jpg" />
             </div>
             <div className="w-1/6"/>
