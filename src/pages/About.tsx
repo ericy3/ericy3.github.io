@@ -17,7 +17,7 @@ const About = () => {
     return (
         <div className="flex flex-row font-quicksand text-lg self-center">
             <div className="w-1/6" />
-            <div className="flex flex-col w-1/3 inline-block mt-16 text-right mr-2">
+            <div className="flex flex-col w-1/3 inline-block mt-10 text-right mr-2">
                 <div className="text-7xl mb-5">
                     hey, i'm <a className="text-green-800">eric yang.</a>  
                 </div>

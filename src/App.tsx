@@ -9,7 +9,7 @@ function App() {
     <Navbar />
     <div className="App bg-orange-50 h-screen"> 
         <div className="flex flex-row flex-start">
-          <div className="pt-48">
+          <div className="pt-52">
             <About />
             </div>
           </div>
