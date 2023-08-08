@@ -2,9 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 
-function NavItem({dest, name}: {dest: string; name: string}) {
+function NavItem({dest, name, home}: {dest: string; name: string, home?: boolean}) {
+    if (!home) {
+        return (
+            <div className="font-quicksand text-xl font-semibold hover:text-gray-400">
+                <Link to={dest} className="navbar-item">{name}</Link>
+            </div>
+        );
+        } 
     return (
-        <div className="flex font-quicksand text-xl items-center">
+        <div className="font-quicksand text-xl font-extrabold hover:text-green-800">
             <Link to={dest} className="navbar-item">{name}</Link>
         </div>
     );
@@ -12,25 +19,26 @@ function NavItem({dest, name}: {dest: string; name: string}) {
 
 function NavLink({dest, name}: {dest: string; name: string}) {  
     return (
-        <div className="flex font-quicksand text-xl">
-            {/* <a  to={dest} className="navbar-item">{name}</a> */}
+        <div className="font-quicksand text-xl font-semibold hover:text-gray-400">
+            <a href={dest} className="navbar-item">{name}</a>
         </div>
     );
 }
 
 const HomeButton = () => {
     return (
-        <div className='flex flex-col pl-12 text-center'>
-            <NavItem dest="/" name="Eric Yang" />
+        <div className='flex pl-12 text-center'>
+            <NavItem home dest="/" name="Eric Yang" />
         </div>
     );
 }
 
 const Navigation = () => {
     return (
-        <div className='flex flex-row place-content-end space-x-24 pr-24'>
+        <div className='flex flex-row space-x-24 pr-24'>
             <NavItem dest="/experience" name="Experience" />
             <NavItem dest="/projects" name="Projects" />
+            <NavLink dest="null" name="Resume" />
             <NavItem dest="/photos" name="Photos" />
         </div>
     );
@@ -39,12 +47,12 @@ const Navigation = () => {
 
 function Navbar() {
     return (
-        <>
-        <div className='h-24 bg-slate-50 border-b border-zinc-400'>
-            <HomeButton />
-            <Navigation />
+        <div className='fixed top-0 right-0 left-0 bg-slate-50 border-b border-zinc-400'>
+            <div className='flex flex-row h-24 justify-between items-center '>
+                <HomeButton />
+                <Navigation />
+            </div>
         </div>
-        </>
 
     )
 }
