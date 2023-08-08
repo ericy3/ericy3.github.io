@@ -47,7 +47,7 @@ const Navigation = () => {
 
 function Navbar() {
     return (
-        <div className='fixed top-0 right-0 left-0 bg-slate-50 border-b border-zinc-400'>
+        <div className='bg-slate-50 border-b border-zinc-400'>
             <div className='flex flex-row h-24 justify-between items-center '>
                 <HomeButton />
                 <Navigation />

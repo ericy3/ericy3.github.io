@@ -6,7 +6,9 @@ import Navbar from './shared/Navbar';
 function App() {
   return (
     <>
-    <Navbar />
+    <div className="fixed top-0 right-0 left-0" >
+      <Navbar />
+    </div>
     <div className="App bg-orange-50 h-screen"> 
         <div className="flex flex-row flex-start">
           <div className="pt-52">
