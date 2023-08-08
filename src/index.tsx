@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Photos from './pages/Photos';
+import Projects from './pages/Projects';
+import Experience from './pages/Experience';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -18,6 +21,9 @@ ReactDOM.render(
   <Router>
     <Routes>
       <Route path="/" element={<App />} />
+      <Route path="/photos" element={<Photos />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/experience" element={<Experience />} />
     </Routes>
   </Router>,
   document.getElementById('root')
