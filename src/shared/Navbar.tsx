@@ -27,7 +27,7 @@ function NavLink({dest, name}: {dest: string; name: string}) {
 
 const HomeButton = () => {
     return (
-        <div className='flex pl-12 text-center'>
+        <div className='flex pl-10 text-center'>
             <NavItem home dest="/" name="Eric Yang" />
         </div>
     );
@@ -35,7 +35,7 @@ const HomeButton = () => {
 
 const Navigation = () => {
     return (
-        <div className='flex flex-row space-x-24 pr-24'>
+        <div className='flex flex-row space-x-24 pr-20'>
             <NavItem dest="/experience" name="Experience" />
             <NavItem dest="/projects" name="Projects" />
             <NavLink dest="null" name="Resume" />

@@ -7,6 +7,8 @@ module.exports = {
     extend: {
       fontFamily: {
         quicksand: "Quicksand",
+        playfair: "Playfair Display",
+        raleway: "Raleway",
       },
     },
   },
