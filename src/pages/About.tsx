@@ -51,7 +51,7 @@ const About = () => {
                     <SocialIcons />
                 </div>
                 <div className="flex w-1/3 ml-28 justify-items-center">
-                    <img id="portrait" className="w-3/4 rounded-full border-2 border-green-700" alt="portrait" src="../pictures/square_portrait.jpg" />
+                    <img id="portrait" className="w-3/4 rounded-full border-2 border-green-700" alt="portrait" src="assets/square_portrait.jpg" />
                 </div>
                 <div className="w-1/6"/>
             </div>
