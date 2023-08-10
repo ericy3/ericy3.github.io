@@ -1,34 +1,113 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { ExperienceItems } from "./ExperienceItems";
 
 
 
 const Education = () => {
     return (
-        <div className="flex flex-row h-screen bg-orange-50 ">
-            <div className="w-1/4" />
-            <div className="flex flex-row justify-between p-12 font-raleway">
-                <div className="text-xl font-bold">
-                    University of California, Berkeley
-                    <div className="text-l font-semibold">
-                        Bachelor's of Arts - Computer Science
-                    </div>
+        <div className="flex flex-row justify-between font-raleway mt-10 bg-orange-50 pb-14">
+            <div className="mx-auto">
+                <div className="my-4 text-2xl font-bold">
+                    Education
                 </div>
-                <div className="text-xl font-bold">
-                    August 2021 - May 2025
+                <div className="flex flex-col text-center bg-yellow-100 p-10  max-w-lg rounded-3xl border-2 border-black">
+                <ExperienceRow 
+                    name="University of California, Berkeley" 
+                    date="August 2021 - May 2025" 
+                    role="Bachelor's of Arts in Computer Science"/>
+                    <div className="underline decoration-double"> Coursework </div>
+                    <li>Structure and Interpretation of Computer Programs </li>
+                    <li>Designing Information Systems I + II </li>
+                    <li>Data Structures </li> 
+                    <li> Foundations of Data Science </li>
+                    <li> Multivariable Calculus </li> 
+                    <li>Discrete Mathematics and Probability Theory </li> 
+                    <li> Machine Structures </li>
+                    <li> Principles and Techniques of Data Science </li> 
+                    <li> Linux System Administration </li> 
+                    <li> Economic Demography </li> 
                 </div>
-            </div>
-            <div className="w-1/4" />
+            </div>      
+        </div>
+    );
+}
+
+const JobExperience = () => {
+    const [currentJob, setCurrentJob] = useState(0);
+
+
+    return (
+        <div className="flex flex-col lg:flex-row font-raleway mt-10 bg-orange-50 pb-14">
+            <div className="mx-auto">
+                <div className="my-4 text-2xl font-bold place-self-center">
+                    Experience
+                </div>
+                <div className="flex flex-row justify-evenly mb-4"> 
+                {ExperienceItems.map((item, index) => (              
+                    <div
+                        className={`hover:bg-gray-200 p-2 cursor-pointer rounded-lg ${index === currentJob ? 'bg-gray-200' : ''}`}
+                        onClick={() => setCurrentJob(index)}
+                        key={index}
+                        >
+                        {item.company}
+                        </div>                
+                ))}
+                </div>
+                <div className="flex flex-col text-center bg-lime-100 p-10 rounded-lg max-w-lg text-left rounded-3xl border-2 border-black">
+                    <JobContent job={ExperienceItems[currentJob]} />
+                </div>
+                <button />
+            </div>      
+        </div>
+    );
+}
+
+
+const ExperienceRow = ({name, date, role}: {name: string, date: string, role: string}) => {
+    return (
+        <div>
+            <img src={require("../assets/Berkeley_Logo.png")} className="h-28 rounded-full mx-auto" alt="Berkeley Logo"/>
+            <div className="text-xl font-bold "> {name} </div>
+            <div className="text-l font-semibold mt-2"> {role} </div>
+            <div className="text-m font-medium mt-2 "> {date} </div>        
         </div>
     )
 }
 
+type ExperienceItemProps = {
+    company: string,
+    role: string,
+    date: string,
+    detail: string[],
+} 
+
+const JobContent = ({job}: {job: ExperienceItemProps}) => {
+    return (
+        <div>
+            <ExperienceRow name={job.company} date={job.date} role={job.role} />
+            <div>
+                {
+                    job.detail.map((detail) => {
+                        return (
+                            <li> {detail} </li>
+                        );
+                    })
+                }
+            </div>
+        </div>
+    );
+}
+
+
+
 
 const Experience = () => {
     return (
-        <div>
+        <div className="flex flex-col justify-center w-screen mx-auto ">
             <Education />
+            <JobExperience />
         </div>
+
     )
 }
 

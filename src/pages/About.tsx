@@ -40,8 +40,8 @@ const ProfilePic = (width: number) => {
 
 const About = () => {
     return (
-        <div className="flex flex-col justify-center pt-52 pb-8 bg-orange-100">
-            <div className="flex flex-row font-quicksand text-lg self-center">
+        <div className="flex flex-col justify-center pt-52 pb-8 bg-orange-100 border-b border-zinc-400">
+            <div className="flex flex-col-reverse lg:flex-row font-quicksand text-lg self-center">
                 <div className="w-1/6" />
                 <div className="flex flex-col w-1/3 inline-block mt-16 text-right mr-2">
                     <div className="text-6xl mb-5">
