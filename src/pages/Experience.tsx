@@ -6,7 +6,7 @@ import { AiOutlineCaretDown } from "react-icons/ai";
 
 const Education = () => {
     return (
-        <div className="flex flex-row justify-between font-raleway mt-10 pb-14 lg:mr-24">
+        <div className="flex flex-row justify-between font-raleway mt-10 pb-14 xl:mr-24">
             <div className="mx-auto">
                 <div className="my-4 text-2xl font-bold p-2 rounded-3xl border-2 border-black">
                     Education
@@ -39,7 +39,7 @@ const JobExperience = () => {
 
 
     return (
-        <div className="flex flex-col lg:flex-row font-raleway mt-10 pb-14 lg:ml-24">
+        <div className="flex flex-col font-raleway mt-10 pb-14 xl:ml-24">
             <div className="mx-auto">
                 <div className="my-4 text-2xl font-bold place-self-center p-2 rounded-3xl border-2 border-black">
                     Experience
@@ -105,7 +105,7 @@ const JobContent = ({job}: {job: ExperienceItemProps}) => {
 
 const Experience = () => {
     return (
-        <div className="flex flex-col lg:flex-row justify-center w-screen mx-auto bg-orange-50">
+        <div className="flex flex-col xl:flex-row justify-center w-screen mx-auto bg-orange-50">
             <Education />
             <JobExperience />
         </div>

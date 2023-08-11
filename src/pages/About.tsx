@@ -6,7 +6,12 @@ import { AiOutlineArrowDown } from 'react-icons/ai';
 const Descriptors = () => {
     return (
         <div>
-            <div className="flex flex-row justify-end mr-2 font-mono text-2xl self-end">
+            <div className="md:hidden flex flex-col justify-end mr-2 font-mono text-2xl self-end">
+            <a className=""> Student </a>
+            <a className="text-green-800"> Software Engineer </a>
+            <a className=""> Photographer </a>
+            </div>
+            <div className="hidden md:block flex flex-row justify-end mr-2 font-mono text-2xl self-end ">
                 Software Engineer | Student | Photographer
             </div>
         </div>
@@ -16,8 +21,8 @@ const Descriptors = () => {
 
 const Introduction = () => {
     return (
-        <div className="flex flex-col font-mono text-2xl self-center w-6/12 mt-16">
-            <div className="font-quicksand font-bold text-4xl mb-8">
+        <div className="flex flex-col font-mono text-lg lg:text-2xl self-center w-6/12 mt-16">
+            <div className="font-quicksand font-bold text-3xl lg:text-4xl mb-8">
                 About Me
             </div>
             <div className="">
@@ -30,28 +35,22 @@ const Introduction = () => {
     )
 }
 
-const ProfilePic = (width: number) => {
-    if (width < 640) {
-        return null;
-    }
-    return <img id="portrait" className="w-3/4 rounded-full border-2 border-green-700" alt="portrait" src="../pictures/square_portrait.jpg" />;
-}
 
 
 const About = () => {
     return (
-        <div className="flex flex-col justify-center pt-52 pb-8 bg-orange-100 border-b border-zinc-400">
-            <div className="flex flex-col-reverse lg:flex-row font-quicksand text-lg self-center">
+        <div className="flex flex-col justify-center pb-8 pt-16 lg:pt-52 bg-orange-100 border-b border-zinc-400">
+            <div className="flex flex-col-reverse md:flex-row font-quicksand text-lg self-center">
                 <div className="w-1/6" />
-                <div className="flex flex-col w-1/3 inline-block mt-16 text-right mr-2">
-                    <div className="text-6xl mb-5">
+                <div className="flex flex-col content-center self-center lg:self-auto w-1/3 inline-block mt-16 text-center lg:text-right mr-2">
+                    <div className="text-4xl  lg:text-6xl mb-5">
                         hey, i'm <a className="text-green-800">eric yang.</a>  
                     </div>
                     <Descriptors />
                     <SocialIcons />
                 </div>
-                <div className="flex w-1/3 ml-28 justify-items-center">
-                    <img id="portrait" className="w-3/4 rounded-full border-2 border-green-700" alt="portrait" src="assets/square_portrait.jpg" />
+                <div className="flex self-center w-7/12 md:w-1/3 md:ml-28 ">
+                    <img id="portrait" className="self-center md:w-3/4 rounded-full border-2 border-green-700" alt="portrait" src="assets/square_portrait.jpg" />
                 </div>
                 <div className="w-1/6"/>
             </div>

@@ -35,7 +35,7 @@ const HomeButton = () => {
 
 const Navigation = () => {
     return (
-        <div className='flex flex-row space-x-24 pr-20'>
+        <div className='flex flex-row space-x-24 pr-24'>
             <NavItem dest="/experience" name="Experience" />
             <NavItem dest="/projects" name="Projects" />
             <ResumeLink name="Resume" />
