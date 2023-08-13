@@ -1,6 +1,21 @@
 import React, { useState } from "react";
 import { ExperienceItems } from "./ExperienceItems";
 import { AiOutlineCaretDown } from "react-icons/ai";
+import Sysdig from '../assets/Sysdig_Logo.webp';
+import Codify from '../assets/Codify_Logo.png';
+import BerkeleyLegends from '../assets/Berkeley_Legends_Logo.png';
+import Berkeley_Logo from '../assets/Berkeley_Logo.png';
+
+
+type StringToPictureType = {
+    [key: string]: string,
+}
+
+const StringToPicture:StringToPictureType = {
+    "Sysdig": Sysdig,
+    "Codify": Codify,
+    "BerkeleyLegends": BerkeleyLegends,
+}
 
 
 
@@ -16,14 +31,15 @@ const Education = () => {
                 <ExperienceRow 
                     name="University of California, Berkeley" 
                     date="August 2021 - May 2025" 
-                    role="Bachelor's of Arts in Computer Science"/>
+                    role="Bachelor's of Arts in Computer Science"
+                    photoName={Berkeley_Logo}/>  
                     <div className="underline decoration-double"> Coursework </div>
-                    <li>Structure and Interpretation of Computer Programs </li>
-                    <li>Designing Information Systems I + II </li>
-                    <li>Data Structures </li> 
+                    <li> Structure and Interpretation of Computer Programs </li>
+                    <li> Designing Information Systems I + II </li>
+                    <li> Data Structures </li> 
                     <li> Foundations of Data Science </li>
                     <li> Multivariable Calculus </li> 
-                    <li>Discrete Mathematics and Probability Theory </li> 
+                    <li> Discrete Mathematics and Probability Theory </li> 
                     <li> Machine Structures </li>
                     <li> Principles and Techniques of Data Science </li> 
                     <li> Linux System Administration </li> 
@@ -47,7 +63,7 @@ const JobExperience = () => {
                 <div className="flex flex-row justify-evenly mb-4 p-1"> 
                 {ExperienceItems.map((item, index) => (              
                     <div
-                        className={`hover:bg-gray-200 p-2 cursor-pointer rounded-lg ${index === currentJob ? 'bg-gray-200' : ''}`}
+                        className={`hover:bg-gray-200 p-2 cursor-pointer rounded-lg ${index === currentJob ? 'bg-gray-200 border-2 border-gray-500 border-solid' : ''}`}
                         onClick={() => setCurrentJob(index)}
                         key={index}
                         >
@@ -65,11 +81,11 @@ const JobExperience = () => {
 }
 
 
-const ExperienceRow = ({name, date, role}: {name: string, date: string, role: string}) => {
+const ExperienceRow = ({name, date, role, photoName}: {name: string, date: string, role: string, photoName: string}) => {
     return (
         <div>
-            <img src={require("../assets/Berkeley_Logo.png")} className="h-28 rounded-full mx-auto mb-5" alt="Berkeley Logo"/>
-            <div className="text-xl font-bold "> {name} </div>
+            <img src={photoName} className="h-28 rounded-full mx-auto mb-5 bg-white border-2 p-2 border-gray-500 border-solid" alt={photoName}/>
+            <div className="text-2xl font-extrabold"> {name} </div>
             <div className="text-l font-semibold mt-2"> {role} </div>
             <div className="text-m font-medium mt-2 "> {date} </div>        
         </div>
@@ -81,12 +97,13 @@ type ExperienceItemProps = {
     role: string,
     date: string,
     detail: string[],
+    photoName: string,
 } 
 
 const JobContent = ({job}: {job: ExperienceItemProps}) => {
     return (
         <div>
-            <ExperienceRow name={job.company} date={job.date} role={job.role} />
+            <ExperienceRow name={job.company} date={job.date} role={job.role} photoName={StringToPicture[job.photoName]}/>
             <div>
                 {
                     job.detail.map((detail) => {
@@ -101,11 +118,9 @@ const JobContent = ({job}: {job: ExperienceItemProps}) => {
 }
 
 
-
-
 const Experience = () => {
     return (
-        <div className="flex flex-col xl:flex-row justify-center w-screen mx-auto bg-orange-50">
+        <div className="flex flex-col xl:flex-row justify-center w-screen mx-auto bg-orange-50 border-b border-zinc-400">
             <Education />
             <JobExperience />
         </div>

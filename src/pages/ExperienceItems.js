@@ -2,6 +2,7 @@ export const ExperienceItems = [
 	{
 		company: "Sysdig",
 		role: "Software Engineering Intern",
+		photoName: "Sysdig",
 		date: "May 2023 - August 2023",
 		detail: [
 			"Collaborating on a team developing a ChatGPT-powered assistant capable of generating, verifying, and explaining valid promQL queries and answering questions relating to platform-specific parameters and questions, tuned through various different prompt engineering strategies.",
@@ -11,6 +12,7 @@ export const ExperienceItems = [
 	},
 	{
 		company: "Berkeley Legends",
+		photoName: "BerkeleyLegends",
 		role: "Website Development Lead",
 		date: "August 2022-Present",
 		detail: [
@@ -21,6 +23,7 @@ export const ExperienceItems = [
 	},
 	{
 		company: "Codify",
+		photoName: "Codify",
 		role: "Developer",
 		date: "Jan 2023-Present",
 		detail: [

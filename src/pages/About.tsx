@@ -1,6 +1,9 @@
 import React from 'react';
 import SocialIcons from '../components/SocialIcons';
 import { AiOutlineArrowDown } from 'react-icons/ai';
+import portrait from '../assets/square_portrait.jpg';
+
+
 
 
 const Descriptors = () => {
@@ -39,6 +42,7 @@ const Introduction = () => {
 
 const About = () => {
     return (
+        // possible gradient: bg-gradient-to-r from-orange-50 to-orange-100
         <div className="flex flex-col justify-center pb-8 pt-16 lg:pt-52 bg-orange-100 border-b border-zinc-400">
             <div className="flex flex-col-reverse md:flex-row font-quicksand text-lg self-center">
                 <div className="w-1/6" />
@@ -50,7 +54,7 @@ const About = () => {
                     <SocialIcons />
                 </div>
                 <div className="flex self-center w-7/12 md:w-1/3 md:ml-28 ">
-                    <img id="portrait" className="self-center md:w-3/4 rounded-full border-2 border-green-700" alt="portrait" src="assets/square_portrait.jpg" />
+                    <img id="portrait" className="self-center md:w-3/4 rounded-full border-2 border-green-700" alt="portrait" src={portrait} />
                 </div>
                 <div className="w-1/6"/>
             </div>
