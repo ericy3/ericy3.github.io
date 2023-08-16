@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/website/static/css/main.0cdd25fb.css",
+    "main.js": "/website/static/js/main.1c8a216d.js",
+    "static/js/787.28cb0dcd.chunk.js": "/website/static/js/787.28cb0dcd.chunk.js",
+    "static/media/Berkeley_Logo.png": "/website/static/media/Berkeley_Logo.859861c5b37fb7ed7033.png",
+    "static/media/Raleway-Variable.ttf": "/website/static/media/Raleway-Variable.575ec9e676c7a85494bb.ttf",
+    "static/media/PlayfairDisplay-Variable.ttf": "/website/static/media/PlayfairDisplay-Variable.3f7c141215e6d22d0f1e.ttf",
+    "static/media/square_portrait.jpg": "/website/static/media/square_portrait.1af175b2c9cedbb46f7d.jpg",
+    "static/media/Eric_Yang_Resume.pdf": "/website/static/media/Eric_Yang_Resume.7a72b6128b9f0d68d5bf.pdf",
+    "static/media/Quicksand-Variable.ttf": "/website/static/media/Quicksand-Variable.cf52df73d8529b4815ed.ttf",
+    "static/media/Berkeley_Legends_Logo.png": "/website/static/media/Berkeley_Legends_Logo.76a483f48aa163c494fe.png",
+    "static/media/Sysdig_Logo.webp": "/website/static/media/Sysdig_Logo.54947d57f9c29fe2e2a3.webp",
+    "index.html": "/website/index.html",
+    "main.0cdd25fb.css.map": "/website/static/css/main.0cdd25fb.css.map",
+    "main.1c8a216d.js.map": "/website/static/js/main.1c8a216d.js.map",
+    "787.28cb0dcd.chunk.js.map": "/website/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0cdd25fb.css",
+    "static/js/main.1c8a216d.js"
+  ]
+}
