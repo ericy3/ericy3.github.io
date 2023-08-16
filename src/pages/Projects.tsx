@@ -22,7 +22,7 @@ const ProjectItemFormat = (props: ProjectItemFormatType) => {
 
 const ProjectItem = () => {
     return (
-        <div className="md:flex-row md:flex-wrap md:items-center mt-10">
+        <div className="md:flex-row md:flex-wrap md:items-center mt-10 p-4">
             <div className="flex flex-col md:grid md:grid-rows-2 md:grid-flow-col justify-center items-center">
                 {ProjectItems.map((item) => {
                     return (
@@ -38,8 +38,10 @@ const ProjectItem = () => {
 
 const Projects = () => {
     return (
-        <div id="projects" className="scroll-mt-24 bg-lime-50 pt-12 font-bold text-4xl pt-8 pb-16">
-            Some of my projects!            
+        <div id="projects" className="scroll-mt-24 bg-lime-50 pt-12 font-bold text-4xl pt-8 pb-16 border-b-2 border-gray-600">
+            <div className="underline decoration-gray-600 decoration-4 decoration-solid underline-offset-8">
+                Some of my projects!      
+            </div>      
                 <ProjectItem />
         </div>
     )
