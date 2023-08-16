@@ -39,7 +39,7 @@ const ProjectItem = () => {
 const Projects = () => {
     return (
         <div id="projects" className="scroll-mt-24 bg-lime-50 pt-12 font-bold text-4xl pt-8 pb-16 border-b-2 border-gray-600">
-            <div className="underline decoration-gray-600 decoration-4 decoration-solid underline-offset-8">
+            <div className="font-raleway underline decoration-gray-600 decoration-4 decoration-solid underline-offset-8">
                 Some of my projects!      
             </div>      
                 <ProjectItem />

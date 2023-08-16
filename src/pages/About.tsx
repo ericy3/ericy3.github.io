@@ -24,13 +24,15 @@ const Descriptors = () => {
 
 const Introduction = () => {
     return (
-        <div className="flex flex-col font-mono text-lg lg:text-2xl self-center w-6/12 mt-16">
-            <div className="font-quicksand font-bold text-3xl lg:text-4xl mb-8">
+        <div className="flex flex-col font-mono text-lg lg:text-2xl self-center items-center w-6/12 mt-16">
+            <div className="font-quicksand font-bold text-3xl w-64 lg:text-4xl mb-8 p-4 border-double border-8 border-green-800">
                 About Me
             </div>
             <div className="">
-                I am a junior studying <a className="text-blue-800"> CS @ UC Berkeley. </a>
+                I am a junior studying CS @ UC Berkeley.
                 I'm interested in software development, systems programming, and machine learning. 
+                Currently, I'm working more on front-end for websites but am also
+                learning backend development and databases.
                 This is my work in progress website that I'm using as a portfolio but also 
                 eventually as a place to share my photos and thoughts on the media I consume.
             </div>
