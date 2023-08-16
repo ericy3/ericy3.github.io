@@ -21,7 +21,7 @@ function NavItem({name, home}: {name: string, home?: boolean}) {
 
 function ResumeLink({name}: {name: string}) {  
     return (
-        <div className="font-quicksand text-xl font-semibold hover:text-gray-400">
+        <div className="font-quicksand text-xl font-semibold text-slate-500 hover:text-gray-300">
             <a href={require("../assets/Eric_Yang_Resume.pdf")} target="_blank" className="navbar-item" rel="noreferrer">Resume</a>
         </div>
     );
@@ -66,6 +66,9 @@ const Navigation = () => {
             </NavHashLink>
             <NavHashLink smooth to="/#projects" onClick={handleNavClick}>
                 <NavItem name="Projects" />
+            </NavHashLink>
+            <NavHashLink smooth to="/#contact" onClick={handleNavClick}>
+                <NavItem name="Contact" />
             </NavHashLink>
             <ResumeLink name="Resume" />
             <NavItem name="Photos" />

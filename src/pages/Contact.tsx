@@ -33,7 +33,7 @@ const Contact = () => {
       };
 
     return (
-        <div className="flex flex-col items-center bg-rose-100 p-12 font-bold">
+        <div id="contact" className="flex flex-col items-center bg-rose-100 p-12 font-bold">
             <Header />
             <div>
                 <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-4 items-center"> 

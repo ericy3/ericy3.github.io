@@ -33,8 +33,6 @@ const Introduction = () => {
                 I'm interested in software development, systems programming, and machine learning. 
                 Currently, I'm working more on front-end for websites but am also
                 learning backend development and databases.
-                This is my work in progress website that I'm using as a portfolio but also 
-                eventually as a place to share my photos and thoughts on the media I consume.
             </div>
         </div>
     )
