@@ -120,11 +120,10 @@ const JobContent = ({job}: {job: ExperienceItemProps}) => {
 
 const Experience = () => {
     return (
-        <div className="flex flex-col xl:flex-row justify-center w-screen mx-auto bg-orange-50 border-b border-zinc-400">
+        <div id="experience" className="scroll-mt-24 flex flex-col xl:flex-row justify-center w-screen mx-auto bg-orange-50 border-b border-zinc-400">
             <Education />
             <JobExperience />
         </div>
-
     )
 }
 

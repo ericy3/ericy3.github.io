@@ -38,7 +38,7 @@ const ProjectItem = () => {
 
 const Projects = () => {
     return (
-        <div className="bg-lime-50 pt-12 font-bold text-4xl pt-8 pb-16">
+        <div id="projects" className="scroll-mt-24 bg-lime-50 pt-12 font-bold text-4xl pt-8 pb-16">
             Some of my projects!            
                 <ProjectItem />
         </div>

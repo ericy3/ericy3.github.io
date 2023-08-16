@@ -43,7 +43,8 @@ const Introduction = () => {
 const About = () => {
     return (
         // possible gradient: bg-gradient-to-r from-orange-50 to-orange-100
-        <div className="flex flex-col justify-center pb-8 pt-16 lg:pt-52 bg-orange-100 border-b border-zinc-400">
+
+        <div id="about" className="flex flex-col justify-center pb-8 pt-16 lg:pt-52 bg-orange-100 border-b border-zinc-400">
             <div className="flex flex-col-reverse md:flex-row font-quicksand text-lg self-center">
                 <div className="w-1/6" />
                 <div className="flex flex-col content-center self-center lg:self-auto w-1/3 inline-block mt-16 text-center lg:text-right mr-2">

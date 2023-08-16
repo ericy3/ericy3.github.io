@@ -1,18 +1,20 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { NavHashLink } from 'react-router-hash-link';
 
 
-function NavItem({dest, name, home}: {dest: string; name: string, home?: boolean}) {
+function NavItem({name, home}: {name: string, home?: boolean}) {
     if (!home) {
         return (
             <div className="font-quicksand text-xl font-semibold hover:text-gray-400">
-                <Link to={dest} className="navbar-item">{name}</Link>
+                {/* <Link to={dest} className="navbar-item">{name}</Link> */}
+                <div>{name}</div>
             </div>
         );
         } 
     return (
         <div className="font-quicksand text-xl font-extrabold hover:text-green-800">
-            <Link to={dest} className="navbar-item">{name}</Link>
+            {/* <Link to={dest} className="navbar-item">{name}</Link> */}
+            <div>{name}</div>
         </div>
     );
 }
@@ -28,18 +30,45 @@ function ResumeLink({name}: {name: string}) {
 const HomeButton = () => {
     return (
         <div className='flex pl-10 text-center'>
-            <NavItem home dest="/" name="Eric Yang" />
+            <NavHashLink smooth to="/#about">
+                <NavItem home name="Eric Yang" />
+            </NavHashLink>
         </div>
     );
 }
 
 const Navigation = () => {
+    const [clicked, setClicked] = useState(false);
+    const [isAtTop, setIsAtTop] = useState(window.scrollY === 0);
+
+
+
+      const handleScroll = () => {
+        const currentScrollPos = window.scrollY;
+        setIsAtTop(currentScrollPos === 0)
+      };
+
+      useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, [isAtTop]);
+
+      function handleNavClick(){
+        if (clicked){
+          setClicked(false);
+        }
+      }
+
     return (
         <div className='flex flex-row space-x-24 pr-24'>
-            <NavItem dest="/experience" name="Experience" />
-            <NavItem dest="/projects" name="Projects" />
+            <NavHashLink smooth to="/#experience" onClick={handleNavClick}> 
+                <NavItem name="Experience" />
+            </NavHashLink>
+            <NavHashLink smooth to="/#projects" onClick={handleNavClick}>
+                <NavItem name="Projects" />
+            </NavHashLink>
             <ResumeLink name="Resume" />
-            <NavItem dest="/photos" name="Photos" />
+            <NavItem name="Photos" />
         </div>
     );
 }
