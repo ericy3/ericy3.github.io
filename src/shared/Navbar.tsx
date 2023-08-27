@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { NavHashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 
-function NavItem({name, home}: {name: string, home?: boolean}) {
+function NavItem({name, home, dest}: {name: string, home?: boolean, dest?: string}) {
     if (!home) {
         return (
             <div className="font-quicksand text-xl font-semibold hover:text-gray-400">
@@ -10,7 +11,11 @@ function NavItem({name, home}: {name: string, home?: boolean}) {
                 <div>{name}</div>
             </div>
         );
-        } 
+        } else if (dest != null) {
+            <div className="font-quicksand text-xl font-semibold hover:text-gray-400">
+                <Link to={dest} className="navbar-item">{name}</Link>
+            </div>
+        }
     return (
         <div className="font-quicksand text-xl font-extrabold hover:text-green-800">
             {/* <Link to={dest} className="navbar-item">{name}</Link> */}
@@ -71,7 +76,9 @@ const Navigation = () => {
                 <NavItem name="Contact" />
             </NavHashLink>
             <ResumeLink name="Resume" />
-            <NavItem name="Photos" />
+            <NavHashLink smooth to="/#photos" onClick={handleNavClick}>
+                <NavItem name="Photos" />
+            </NavHashLink>
         </div>
     );
 }

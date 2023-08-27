@@ -6,6 +6,7 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import { BrowserRouter as Router } from "react-router-dom";
+import Photos from './pages/Photos';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Experience />
           <Projects />
           <Contact />
+          <Photos />
      </div>
      </Router>
   );
