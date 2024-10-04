@@ -29,10 +29,10 @@ const Introduction = () => {
                 About Me
             </div>
             <div className="">
-                I am a junior studying CS @ UC Berkeley.
+                I am a senior studying CS @ UC Berkeley.
                 I'm interested in software development, systems programming, and machine learning. 
-                Currently, I'm working more on front-end for websites but am also
-                learning backend development and databases.
+                Recently, I've been working more with machine learning, as well as learning more about
+                internet and database architectures.
             </div>
         </div>
     )

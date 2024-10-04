@@ -34,8 +34,7 @@ const Education = () => {
                     role="Bachelor's of Arts in Computer Science"
                     photoName={Berkeley_Logo}/>  
                     <div className="underline decoration-double"> Coursework </div>
-                    <li> Structure and Interpretation of Computer Programs </li>
-                    <li> Designing Information Systems I + II </li>
+                    <li> Designing Information Systems </li>
                     <li> Data Structures </li> 
                     <li> Foundations of Data Science </li>
                     <li> Multivariable Calculus </li> 
@@ -43,7 +42,8 @@ const Education = () => {
                     <li> Machine Structures </li>
                     <li> Principles and Techniques of Data Science </li> 
                     <li> Linux System Administration </li> 
-                    <li> Economic Demography </li> 
+                    <li> Internet Architecture </li> 
+                    <li> Database Systems </li>
                 </div>
             </div>      
         </div>

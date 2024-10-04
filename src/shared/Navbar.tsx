@@ -76,9 +76,9 @@ const Navigation = () => {
                 <NavItem name="Contact" />
             </NavHashLink>
             <ResumeLink name="Resume" />
-            <NavHashLink smooth to="/#photos" onClick={handleNavClick}>
+            <Link to="https://ericy3.myportfolio.com">
                 <NavItem name="Photos" />
-            </NavHashLink>
+            </Link>
         </div>
     );
 }
