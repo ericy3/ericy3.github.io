@@ -2,6 +2,7 @@ import React from 'react';
 import SocialIcons from '../components/SocialIcons';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import portrait from '../assets/square_portrait.jpg';
+import Typewriter from 'typewriter-effect';
 
 
 
@@ -9,13 +10,19 @@ import portrait from '../assets/square_portrait.jpg';
 const Descriptors = () => {
     return (
         <div>
-            <div className="md:hidden flex flex-col justify-end mr-2 font-mono text-2xl self-end">
+            {/* <div className="md:hidden flex flex-col justify-end mr-2 font-mono text-2xl self-end">
             <a className=""> Student </a>
             <a className="text-green-800"> Software Engineer </a>
             <a className=""> Photographer </a>
-            </div>
+            </div> */}
             <div className="hidden md:block flex flex-row justify-end mr-2 font-mono text-2xl self-end ">
-                Software Engineer | Student | Photographer
+                <Typewriter
+                    options={{
+                        strings: ['Software Engineer', 'Student', 'Photographer'],
+                        autoStart: true,
+                        loop: true,
+                        }}
+                />
             </div>
         </div>
     )
@@ -29,10 +36,11 @@ const Introduction = () => {
                 About Me
             </div>
             <div className="">
-                I am a senior studying CS @ UC Berkeley.
-                I'm interested in software development, systems programming, and machine learning. 
-                Recently, I've been working more with machine learning, as well as learning more about
-                internet and database architectures.
+                I'm currently a senior studying CS @ UC Berkeley.
+                In my free time, you'll find me coding up fun random widgets, taking photos, skateboarding around, or trying out the newest indie games.
+            </div>
+            <div>
+                I'd love to connect! Feel free to reach out to me at ey3(at)berkeley.edu.
             </div>
         </div>
     )

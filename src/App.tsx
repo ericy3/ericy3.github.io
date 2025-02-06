@@ -18,8 +18,7 @@ function App() {
           <About/>
           <Experience />
           <Projects />
-          <Contact />
-          {/* <Photos /> */}
+          {/* <Contact /> */}
      </div>
      </Router>
   );

@@ -72,10 +72,10 @@ const Navigation = () => {
             <NavHashLink smooth to="/#projects" onClick={handleNavClick}>
                 <NavItem name="Projects" />
             </NavHashLink>
-            <NavHashLink smooth to="/#contact" onClick={handleNavClick}>
+            {/* <NavHashLink smooth to="/#contact" onClick={handleNavClick}>
                 <NavItem name="Contact" />
-            </NavHashLink>
-            <ResumeLink name="Resume" />
+            </NavHashLink> */}
+            {/* <ResumeLink name="Resume" /> */}
             <Link to="https://ericy3.myportfolio.com">
                 <NavItem name="Photos" />
             </Link>
